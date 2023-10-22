@@ -3,11 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <title>Lenni Art</title>
-        <link rel="stylesheet" href="styles/styles.css?ver=0">
 
+        <link rel="stylesheet" href="styles/styles.css?ver=0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#fff2f6">
+        <meta name="theme-color" content="#ffffff">
     </head>
 
     <body class="body">
@@ -15,23 +22,22 @@
             <a href="index.html" class="page-header__logo">Логотип</a>
 
             <nav class="page-header__nav">
-                <a href="#" class="page-header__nav-link">Мероприятия</a>
-                <a href="#" class="page-header__nav-link">Блог</a>
-                <a href="about" class="page-header__nav-link">О нас</a>
-                <a href="#" class="page-header__nav-link">Контакты</a>
+                <a href="home__offers" class="page-header__nav-link">Мероприятия</a>
+                <a href="home__blog" class="page-header__nav-link">Блог</a>
+                <a href="home__about" class="page-header__nav-link">О нас</a>
+                <a href="home__contacts" class="page-header__nav-link">Контакты</a>
             </nav>
 
             <a href="#" class="btn page-header__user-btn"></a>
         </header>
 
         <main class="main">
-            <div class="home" id="sdfsdf">
+            <div class="home">
                 <header class="main-header home__main-header"></header>
-                <section class="offers home__offers"></section>
-                <section class="about home__about" id="about"></section>
-                <section class="upcoming home__upcoming"></section>
-                <section class="blog home__blog"></section>
-                <section class="contacts home__contacts"></section>
+                <section class="about home__about"          id="home__about"></section>
+                <section class="offers home__offers"        id="home__offers"></section>
+                <section class="blog home__blog"            id="home__blog"></section>
+                <section class="contacts home__contacts"    id="home__contacts"></section>
             </div>
         </main>
 
