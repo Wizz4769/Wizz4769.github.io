@@ -14,10 +14,12 @@
     color: black;
     font-weight: 600;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 24.51px;
     text-decoration: none;
 }
+.btn page-header__user-btn {
 
+}
 
 .page-footer {
 
