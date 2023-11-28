@@ -256,7 +256,7 @@ button {
     background-color: rgba(222, 222, 222, 0.5);
   }
 }
-.page-header__container__container {
+.page-header__container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -265,9 +265,13 @@ button {
   margin-right: auto;
   padding-left: 40px;
   padding-right: 40px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
