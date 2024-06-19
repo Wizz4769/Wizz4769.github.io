@@ -1,15 +1,35 @@
 .title {
-    margin: 0 0 150px;
-    box-sizing: border-box;
-    padding: 7px 45px 9px;
-    max-width: 624px;
-    width: 100%;
-    text-align: center;
-    background-color: @black;
-    text-transform: uppercase;
-    font-family: Lora;
-    font-size: 36px;
-    font-style: normal;
+    // margin: 0 0 150px;
+    // box-sizing: border-box;
+    // padding: 7px 45px 9px;
+    // max-width: 624px;
+    // width: 100%;
+    // text-align: center;
+    // background-color: @black;
+    // text-transform: uppercase;
+    // font-family: Lora;
+    // font-size: 36px;
+    // font-style: normal;
+    // font-weight: 500;
+    // color: @white;
+
+    margin: 0 0 80px;
+    font-family: @font2;
     font-weight: 500;
-    color: @white;
+    font-size: 70px;
+    line-height: 90px;
+    text-align: center;
+
+    @media @bw1340 {
+        margin-bottom: 60px;
+        font-size: 40px;
+        line-height: 51px;
+    }
+
+    @media @bw768 {
+        margin-bottom: 40px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
 }

@@ -5,132 +5,200 @@
         @@include('blocks/page-header.html')
 
         <main class="main">
+            @@include('blocks/breadscrumbs.html')
             <div class="events">
-                <div class="events__container">
-                    <h2 class="events__title title">Мероприятия</h2>
-                    <div class="events__list listing">
-                        <article class="listing__card-event card-event">
-                            <a href="#" class="card-event__link">
-                                <picture class="card-event__picture">
-                                    <img src="assets/images/nirvana.jpg"
-                                         class="card-event__picture-img"
-                                         alt="img" />
-                                </picture>
-                                <h3 class="card-event__title">
-                                    Собираемся и слушаем альбом Nirvana. Nirvana
-                                </h3>
-                                <p class="card-event__text">
-                                    Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный
-                                    материал.
-                                </p>
-                                <time datetime="2022-12-07T18:00" 
-                                      class="card-event__time">07.12.2022 | начало 18.00</time>
-                            </a>
-
-                        </article>
-
-                        <article class="listing__card-event card-event">
-                            <a href="#" class="card-event__link">
-                                <picture class="card-event__picture">
-                                    <img src="assets/images/staff.jpg"
-                                         class="card-event__picture-img"
-                                         alt="img" />
-                                </picture>
-                                <h3 class="card-event__title">
-                                    Есть тема, нужно обсудить с HowStuffWorks
-                                </h3>
-                                <p class="card-event__text">
-                                    Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи: от игрушек до водяных дамб.
-                                </p>
-                                <time datetime="2022-12-14T18:30" 
-                                      class="card-event__time">14.12.2022 | начало 18.30</time>
-                            </a>
-
-                        </article>
-
-                        <article class="listing__card-event     card-event">
-                            <a href="#" class="card-event__link">
-                                <picture class="card-event__picture">
-                                    <img src="assets/images/sade.jpg"
-                                         class="card-event__picture-img"
-                                         alt="img" />
-                                </picture>
-                                <h3 class="card-event__title">
-                                    Вечер | The Best of Sade
-                                </h3>
-                                <p class="card-event__text">
-                                    Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, 
-                                    ритм-блюза и фанка.
-                                </p>
-                                <time datetime="2022-12-16T20:00" 
-                                      class="card-event__time">16.12.2022 | начало 20.00</time>
-                            </a>
-
-                        </article>
-
-                        <article class="listing__card-event     card-event">
-                            <a href="#" class="card-event__link">
-                                <picture class="card-event__picture">
-                                    <img src="assets/images/malevich.jpg"
-                                         class="card-event__picture-img"
-                                         alt="img" />
-                                </picture>
-                                <h3 class="card-event__title">
-                                    Выставка Малевича в Томске
-                                </h3>
-                                <p class="card-event__text">
-                                    Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.
-                                </p>
-                                <time datetime="2022-12-23T20:00" 
-                                      class="card-event__time">23.12.2022 | начало 20.00</time>
-                            </a>
-
-                        </article>
-
-                        <article class="listing__card-event     card-event">
-                            <a href="#" class="card-event__link">
-                                <picture class="card-event__picture">
-                                    <img src="assets/images/tatler.jpg"
-                                         class="card-event__picture-img"
-                                         alt="img" />
-                                </picture>
-                                <h3 class="card-event__title">
-                                    Мастер — класс по студийной съемке от Tatler
-                                </h3>
-                                <p class="card-event__text">
-                                    Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.
-                                </p>
-                                <time datetime="2022-12-25T13:00" 
-                                      class="card-event__time">25.12.2022 | начало 13.00</time>
-                            </a>
-
-                        </article>
-
-                        <article class="listing__card-event     card-event">
-                            <a href="#" class="card-event__link">
-                                <picture class="card-event__picture">
-                                    <img src="assets/images/hatters.jpg"
-                                         class="card-event__picture-img"
-                                         alt="img" />
-                                </picture>
-                                <h3 class="card-event__title">
-                                    Повесилимся на славу на концерте The Hatters
-                                </h3>
-                                <p class="card-event__text">
-                                    Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко
-                                </p>
-                                <time datetime="2022-12-27T10:00" 
-                                      class="card-event__time">27.12.2022 | начало 10.00</time>
-                            </a>
-
-                        </article>
-
+                <section class="listing events__listing">
+                    <h2 class="listing__title section-title">Мероприятия</h2>
+                    <div class="listing__events-list">
+                        <!-- prettier-ignore -->
+                        @@loop('blocks/event-card.html', [
+                        {
+                            "class": "listing__event-card",
+                            "img": "assets/images/nirvana.jpg",
+                            "alt": "nirvana",
+                            "title": "Собираемся и слушаем альбом Nirvana",
+                            "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+                            "time": "07.12.2022 | начало 18.00",
+                            "datetime": "2022-12-07T18:00"
+                        },
+                        {
+                            "class": "listing__event-card",
+                            "img": "assets/images/staff.jpg",
+                            "alt": "stuff",
+                            "title": "Есть тема, нужно обсудить с HowStuffWorks",
+                            "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи: от игрушек до водяных дамб.",
+                            "time": "14.12.2022 | начало 18.30",
+                            "datetime": "2022-12-14T18:30"
+                        },
+                        {
+                            "class": "listing__event-card",
+                            "img": "assets/images/sade.jpg",
+                            "alt": "sade",
+                            "title": "Вечер | The Best of Sade",
+                            "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
+                            "time": "16.12.2022 | начало 20.00",
+                            "datetime": "2022-12-16T20:00"
+                        },
+                        {
+                            "class": "listing__event-card",
+                            "img": "assets/images/malevich.jpg",
+                            "alt": "malevich",
+                            "title": "Выставка Малевича в Томске",
+                            "descr": "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона",
+                            "time": "23.12.2022 | начало 20.00",
+                            "datetime": "2022-12-23T20:00"
+                        },
+                        {
+                            "class": "listing__event-card",
+                            "img": "assets/images/tatler.jpg",
+                            "alt": "tatler",
+                            "title": "Мастер — класс по студийной съемке от Tatler",
+                            "descr": "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
+                            "time": "25.12.2022 | начало 13.00",
+                            "datetime": "2022-12-25T13:00"
+                        },
+                        {
+                            "class": "listing__event-card",
+                            "img": "assets/images/hatters.jpg",
+                            "alt": "hatters",
+                            "title": "Повесилимся на славу на концерте The Hatters",
+                            "descr": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко",
+                            "time": "27.12.2022 | начало 10.00",
+                            "datetime": "2022-12-27T10:00"
+                        }
+                        ])
                     </div>
+                </section>
+                
+                <div class="events__arrow">
+                    <a href="#" class="events__link link">
+                        <span class="link__name">Показать ещё</span>
+                        <div class="link__svg">
+                            <svg class="link__icon link__icon--events"
+                            width="100"
+                            height="80">
+                                <use xlink:href="assets\icons\symbols.svg#arrow_down"></use>
+                            </svg>
+                        </div>
+
+                    </a>
                 </div>
+                
+                <section class="events__services">
+                    <h2 class="section-title">дополнительные  услуги</h2>
+                    <p class="events__services-description">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
+
+
+                    <table class="events__tariffs-table  table">
+                        <thead class="table__head">
+                        <tr class="table__head-tr">
+                            <th class="table__th"></th>
+                            <th class="table__th">Тариф «Light»</th>
+                            <th class="table__th">Тариф «Promo»</th>
+                            <th class="table__th">Тариф «All stars»</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table__body">
+                        <tr class="table__tr">
+                            <th class="table__body-th">Стоимость за час</th>
+                            <td class="table__td">1 000 ₽</td>
+                            <td class="table__td">3 000 ₽</td>
+                            <td class="table__td">3 000 ₽</td>
+                        </tr>
+                        <tr class="table__tr">
+                            <th class="table__body-th">Ведущий мероприятия</th>
+                            <td class="table__td"></td>
+                            <td class="table__td">
+                            <span class="table__ok"></span>
+                            </td>
+                            <td class="table__td">
+                            <span class="table__ok"></span>
+                            </td>
+                        </tr>
+                        <tr class="table__tr">
+                            <th class="table__body-th">Фотосъемка</th>
+                            <td class="table__td">
+                            <span class="table__ok"></span>
+                            </td>
+                            <td class="table__td">
+                            <span class="table__ok"></span>
+                            </td>
+                            <td class="table__td">
+                            <span class="table__ok"></span>
+                            </td>
+                        </tr>
+                        <tr class="table__tr">
+                            <th class="table__body-th">Видеосъемка</th>
+                            <td class="table__td"></td>
+                            <td class="table__td"></td>
+                            <td class="table__td">
+                                <span class="table__ok"></span>
+                            </td>
+                        </tr>
+                        <tr class="table__tr">
+                            <th class="table__body-th">Организация питания</th>
+                            <td class="table__td"></td>
+                            <td class="table__td">
+                                <span class="table__ok"></span>
+                            </td>
+                            <td class="table__td">
+                                <span class="table__ok"></span>
+                            </td>
+                        </tr>
+                        <tr class="table__tr">
+                            <th class="table__body-th">Декор</th>
+                            <td class="table__td"></td>
+                            <td class="table__td"></td>
+                            <td class="table__td">
+                                <span class="table__ok"></span>
+                            </td>
+                            </tr>
+                            <tr class="table__tr">
+                            <th class="table__body-th">Звуковое сопровождение</th>
+                            <td class="table__td"></td>
+                            <td class="table__td">
+                                <span class="table__ok"></span>
+                            </td>
+                            <td class="table__td">
+                                <span class="table__ok"></span>
+                            </td>
+                            </tr>
+                            <tr class="table__tr">
+                            <th class="table__body-th">Дополнительное освещение</th>
+                            <td class="table__td"></td>
+                            <td class="table__td"></td>
+                            <td class="table__td">
+                                <span class="table__ok"></span>
+                            </td>
+                        </tr>
+                    
+                        <tr class="table__tr">
+                            <th class="table__body-th">Клининг</th>
+                            <td class="table__td"></td>
+                            <td class="table__td"></td>
+                            <td class="table__td">
+                                <span class="table__ok"></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    
+                        <tfoot class="table__footer">
+                            <tr class="table__footer-tr">
+                            <th class="table__footer-th"></th>
+                            <th class="table__footer-th">Тариф «Light»</th>
+                            <th class="table__footer-th">Тариф «Promo»</th>
+                            <th class="table__footer-th">Тариф «All stars»</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </section>
+                @@include("blocks/offers.html", {class: 'home__offers'})
+                @@include("blocks/info.html", {class: 'home__info'})
             </div>
         </main>
 
         @@include('blocks/page-footer.html')
+        <script src="scripts/main.min.js"></script>
     </body>
 
 </html>

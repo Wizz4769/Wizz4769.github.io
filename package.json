@@ -30,6 +30,7 @@
         "start": "gulp start"
     },
     "dependencies": {
-        "gulp": "^4.0.2"
+        "gulp": "^4.0.2",
+        "swiper": "^11.0.6"
     }
 }

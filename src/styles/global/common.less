@@ -1,4 +1,5 @@
 html,body {
+  height: 100%;
   width: 100%; 
   margin: 0;
   padding: 0;
@@ -24,6 +25,7 @@ html,body {
   overflow-x: hidden;
 }
 
+
 .main {
   flex: 1 0 auto;
 }
@@ -43,10 +45,52 @@ img {
   object-fit: cover;
 }
 
+input,
+textarea,
+select
 button {
   box-shadow: none;
   outline: none;
   color: @black;
   font-family: @font1;
+}
+
+button{
   cursor: pointer;
+}
+
+input,
+textarea {
+  &::-webkit-input-placeholder{
+    color: #6c6c6c;
+  }
+  &::-moz-placeholder{
+    color: #6c6c6c;
+  }
+  &:-moz-placeholder{
+    color: #6c6c6c;
+  }
+  &::-ms-input-placeholder{
+    color: #6c6c6c;
+  }
+}
+
+input:focus,
+textarea:focus {
+  &::-webkit-input-placeholder{
+    color: transparent;
+  }
+  &::-moz-placeholder{
+    color: transparent;
+  }
+  &:-moz-placeholder{
+    color: transparent;
+  }
+  &::-ms-input-placeholder{
+    color: transparent;
+  }
+}
+
+textarea{
+  resize: none;
 }

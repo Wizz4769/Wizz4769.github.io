@@ -1,0 +1,114 @@
+.pp{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding:  90px 50px 50px;
+  overflow-y: auto;
+  z-index: 110;
+  background-color: @gray;
+  display: none;
+  @supports(backdrop-filter: blur(25px)){
+    background-color: @black_40;
+    backdrop-filter: blur(25px);
+  }
+  &__container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-width: 1210px;
+    width: 100%;
+    margin: auto;
+    padding: 70px 40px 40px;
+    background-color: @gray;
+    background-image: url(../assets/images/noise.png);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto;
+    @media @bw1660{
+      max-width: 1144px;
+    }
+    @media @bw700{
+      padding: 87px 20px 45.5px;
+    }
+  }
+  &__title{
+    margin: -110px 0 70px;
+    box-sizing: border-box;
+    padding: 10px 84px;
+    max-width: 595px;
+    background-color: @black;
+    text-transform: uppercase;
+    font-family: @font2;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0.44px;
+    color: @white;
+    @media @bw1020{
+      max-width: 465px;
+      padding-left: 18px;
+      padding-right: 60px;
+      margin-left: 0;
+    }
+    @media @bw700{
+      padding-left: 20px;
+      padding-right: 22px;
+      padding-top: 9px;
+      padding-bottom: 11px;
+      font-size: 14px;
+      line-height: 19px;
+      min-height: 77px;
+      max-width: 225px;
+      margin-left: 0;
+    }
+  }
+  &__sticky-close{
+    position: sticky;
+    align-self: flex-end;
+    top: 0;
+    width: 0;
+  }
+  &__sticky-btn{
+    position: absolute;
+    right: -70px;
+    top: -100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: @black;
+    color:@white;
+    transition: background-color 0.2s;
+    &:hover{
+      @media (hover:hover) {
+        background-color: @red_dark;
+      }
+    }
+    @media @bw700{
+      width: 36px;
+      height: 36px;
+      right: -38px;
+      top: -105px;
+    }
+  }
+  &__form{
+    margin: auto;
+    max-width: 870px;
+  }
+
+  &__btn-icon{
+    pointer-events: none;
+    @media @bw700{
+      width: 20px;
+    }
+  }
+
+}
+

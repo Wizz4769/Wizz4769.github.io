@@ -1,0 +1,136 @@
+.field{
+
+  &__title{
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-family: @font1;
+  font-size: 18px;
+  line-height: 25px;
+  color: @black;
+
+  &--mb7{
+    margin-bottom: 7px;
+    }
+  }
+  
+  &__inputs{
+    display: flex;
+    gap: 15px;
+  }
+
+  &__select,
+  &__input,
+  &__textarea{
+    box-sizing: border-box;
+    padding: 17px 20px 16px;
+    border: none;
+    width: 100%;
+
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: @white;
+    color: @black;
+  }
+
+  &__select,
+  &__input{
+    height: 55px;
+  }
+
+  &__textarea{
+    height: 150px;
+  }
+
+  &__input{
+
+    &--w55{
+      width: 55px;
+    }
+    &--w110{
+      width: 110px;
+    }
+    &--datetime{
+      padding: 17px 13px 16px;
+      text-align: center;
+    }
+    &::placeholder{
+      font-size: 16px;
+      color: #6c6c6c;
+    }
+  }
+
+  &__label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 22px;
+    color: @black;
+    &--textarea{
+      font-weight: 700;
+      font-family: @font1;
+      font-size: 18px;
+      line-height: 25px;
+      color: @black;
+    }
+  }
+
+  &__date {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+  }
+  &__date-inputs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 55px;
+    pointer-events: none;
+  }
+  &__date-input {
+    box-sizing: border-box;
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: @white;
+    padding: 0 5px;
+    font-size: 16px;
+    line-height: 1.375;
+    text-align: center;
+    pointer-events: none;
+    @media @bw400 {
+      font-size: 14px;
+    }
+    &--year {
+      flex-grow: 1;
+      margin-right: 0;
+    }
+  }
+  &__date-picker {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    opacity: 0;
+    cursor: pointer; 
+  }
+
+  label.error,
+  span.error {
+    color: @red_dark;
+    display: block;
+    margin: 5px 0 0;
+  }
+
+
+}
+

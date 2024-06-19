@@ -1,0 +1,36 @@
+.breadscrumbs{
+  .container;
+  margin-top: 40px;
+
+  @media @bw768{
+    display: none;
+  }
+
+  &__link{
+    display: inline;
+    margin-right: 10px;
+    color: @black;
+    font-size: 16px;
+    line-height: 22px;
+    text-decoration: none;
+    transition: color 0.2s;
+    &::after {
+      content: "/";
+      position: relative;
+      left: 4px;
+      display: inline-block;
+      width: 0;
+      color: @black;
+      pointer-events: none;
+    }
+    &:hover{
+      color: @red;
+    }
+    &:last-child{
+      margin-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+}

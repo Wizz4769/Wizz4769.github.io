@@ -1,0 +1,39 @@
+.arrow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  height: 0;
+  font-weight: 600;
+  font-size: 16px;
+  color: @black;
+  transition: color 0.2s;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  border: none;
+  background-color: transparent;
+
+  &:hover{
+    @media (hover:hover) {
+      color: @red;
+    }
+  }
+
+  &--left{
+    transform: rotate(180deg);
+  }
+
+  &--disabled{
+    color: @gray_dark;
+    pointer-events: none;
+  }
+  
+  &__icon{
+    margin-left: 20px;
+    &--events{
+      margin-top: 18px;
+      margin-left: 0;
+    }
+  }
+
+}

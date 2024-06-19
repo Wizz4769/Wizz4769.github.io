@@ -1,7 +1,22 @@
-.body {
+.body {  
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: @black;
     font-family: @font1;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.375;
+    overflow-x: hidden;
+    padding-top: 147px;
+    
+    @media @bw1660 {
+        padding-top: 111px;
+    }
+
+    @media @bw768 {
+        padding-top: 70px;
+    }
 }
